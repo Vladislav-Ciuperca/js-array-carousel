@@ -6,6 +6,9 @@
 
 body {
     padding-top: 15rem;
+}
+
+.container {
     display: flex;
     justify-content: center;
 }
@@ -20,4 +23,15 @@ body {
 
 .active {
     display: block;
+}
+
+.thumb {
+    width: 10rem;
+    height: 6rem;
+    object-fit: cover;
+    filter: brightness(20%);
+}
+
+.seen {
+    filter: brightness(100%);
 }
