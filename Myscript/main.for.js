@@ -1,15 +1,25 @@
+// console.log("finquacisiamo");
 // trovare tutti gli elementi con class .slide
-let slides = document.getElementsByClassName("slide")
+let slides = document.getElementsByClassName("slide");
 
+let iaa;
 //iterare su tuttte le slide (creare un ciclo)
-for (let i = 0; i < array.length; i++) {
+for (let i = 0; i < slides.length; i++) {
     const slide = slides[i];
-    console.log(slide, i)
+    console.log(slide, i);
 
+    //per ogni slide ccontrolliam o se ha la classe .active
+    if (slide.classList.contains("active")) {
+        // se si,rimuovo la clasee4 active
+        slide.classList.remove("active");
+        iaa = i;
+        console.log("ho rimosso", i)
+        //  e prendo nota dell indice
+
+    }
 }
+console.log("l'immagine attiuva era", iaa)
 
-//per ogni slide ccontrolliam o se ha la classe .active
-// se si,rimuovo la clasee4 active e prendo nota dell indice
 
 //per ogni slide controllo che sia quella successiva a chi e attualmente active
 
