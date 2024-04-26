@@ -29,4 +29,28 @@ function prox() {
     }
 }
 
+function prec() {
+    for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
+        console.log(slide, i);
+
+        //per ogni slide ccontrolliamo se ha la classe .active
+        if (slide.classList.contains("active")) {
+            // se si,rimuovo la clasee4 active
+            slide.classList.remove("active");
+            iaa = i;
+            console.log("ho rimosso", i)
+            //  e prendo nota dell indice
+
+        }
+    }
+
+    if (iaa == 0) {
+        slides[slides.length - 1].classList.add("active")
+    }
+    else {
+        slides[iaa - 1].classList.add("active");
+    }
+}
+
 console.log("l'immagine attiuva era", iaa);
