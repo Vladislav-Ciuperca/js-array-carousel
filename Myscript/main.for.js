@@ -4,6 +4,8 @@ let slides = document.getElementsByClassName("slide");
 
 let iaa;
 //iterare su tuttte le slide (creare un ciclo)
+
+
 for (let i = 0; i < slides.length; i++) {
     const slide = slides[i];
     console.log(slide, i);
@@ -18,8 +20,11 @@ for (let i = 0; i < slides.length; i++) {
 
     }
 }
-console.log("l'immagine attiuva era", iaa)
+console.log("l'immagine attiuva era", iaa);
 
-
-//per ogni slide controllo che sia quella successiva a chi e attualmente active
-
+if (iaa + 1 == slides.length) {
+    slides[0].classList.add("active")
+}
+else {
+    slides[iaa + 1].classList.add("active");
+}
